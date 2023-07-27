@@ -6,11 +6,18 @@ import Word from './components/Word';
 import Popup from './components/Popup';
 import Notification from './components/Notification';
 import { showNotification as show, checkWin } from './helpers/helpers';
+import { generate } from "random-words";
 
 import './App.css';
 
-const words = ['application', 'programming', 'interface', 'wizard'];
-let selectedWord = words[Math.floor(Math.random() * words.length)];
+const words = [];
+let selectedWord;
+const generateRandomWord = () => {
+  selectedWord = generate();
+  words.push(selectedWord);
+};
+
+generateRandomWord()
 
 function App() {
   const [playable, setPlayable] = useState(true);
@@ -50,8 +57,8 @@ function App() {
     setCorrectLetters([]);
     setWrongLetters([]);
 
-    const random = Math.floor(Math.random() * words.length);
-    selectedWord = words[random];
+    generateRandomWord();
+    console.log(selectedWord);
   }
 
   return (
