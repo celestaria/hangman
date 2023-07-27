@@ -6,6 +6,6 @@ A hangman game project created following: https://www.youtube.com/watch?v=jj0W8t
 
 ## Technologies
 
-- Javascript
-- React
+- Javascript: addEventListener, setTimeout, map, reduce
+- React: random-words, useEffect, useState
 - CSS
