@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
 import { checkWin } from '../helpers/helpers';
+import './Header.css'
 
 const Popup = ({correctLetters, wrongLetters, selectedWord, setPlayable, playAgain}) => {
   let finalMessage = '';
@@ -7,10 +8,10 @@ const Popup = ({correctLetters, wrongLetters, selectedWord, setPlayable, playAga
   let playable = true;
 
   if( checkWin(correctLetters, wrongLetters, selectedWord) === 'win' ) {
-    finalMessage = 'Congratulations! You won! 😃';
+    finalMessage = 'You won!';
     playable = false;
   } else if( checkWin(correctLetters, wrongLetters, selectedWord) === 'lose' ) {
-    finalMessage = 'Unfortunately you lost. 😕';
+    finalMessage = 'You lost.';
     finalMessageRevealWord = `...the word was: ${selectedWord}`;
     playable = false;
   }

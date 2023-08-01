@@ -3,7 +3,7 @@
 }
 
 body, #root {
-  background-color: #34495e;
+  background-color: palevioletred;
   color: #fff;
   font-family: Arial, Helvetica, sans-serif;
   display: flex;
@@ -16,6 +16,8 @@ body, #root {
 
 h1 {
   margin: 20px 0 0;
+  color: green;
+  font-size: 5rem;
 }
 
 .game-container {
@@ -28,7 +30,7 @@ h1 {
 
 .figure-container {
   fill: transparent;
-  stroke: #fff;
+  stroke: blueviolet;
   stroke-width: 4px;
   stroke-linecap: round;
 }
@@ -63,7 +65,7 @@ h1 {
 }
 
 .letter {
-  border-bottom: 3px solid #2980b9;
+  border-bottom: 3px solid green;
   display: inline-flex;
   font-size: 30px;
   align-items: center;
@@ -80,14 +82,13 @@ h1 {
   bottom: 0;
   left: 0;
   right: 0;
-  /* display: flex; */
   display: none;
   align-items: center;
   justify-content: center;
 }
 
 .popup {
-  background: #2980b9;
+  background: blueviolet;
   border-radius: 5px;
   box-shadow: 0 15px 10px 3px rgba(0, 0, 0, 0.1);
   padding: 20px;
@@ -97,7 +98,7 @@ h1 {
 .popup button {
   cursor: pointer;
   background-color: #fff;
-  color: #2980b9;
+  color: green;
   border: 0;
   margin-top: 20px;
   padding: 12px 20px;
@@ -127,4 +128,9 @@ h1 {
 
 .notification-container.show {
   transform: translateY(-50px);
+}
+
+p {
+  color: blueviolet;
+  font-size: 1.5rem;
 }
